@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediTrack - Smart Drug Monitoring</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="lightning"></div>
+        <div class="clouds"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-glass">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-pills"></i> MediTrack
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="#">Dashboard</a>
+                <a class="nav-link" href="#">Inventory</a>
+                <a class="nav-link" href="#">Analytics</a>
+                <button class="btn btn-glass ms-3">
+                    <i class="fas fa-bell"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <h1 class="glow-text">Smart Drug Monitoring</h1>
+        <p class="subtitle">Real-time temperature and humidity tracking for pharmaceutical storage</p>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Monitoring Dashboard -->
+            <div class="col-md-8">
+                <div class="card glass-card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-chart-line me-2"></i>Real-time Monitoring
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="monitoringAlerts" class="alert-container"></div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="chart-container">
+                                    <canvas id="temperatureChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="chart-container">
+                                    <canvas id="humidityChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory Status -->
+            <div class="col-md-4">
+                <div class="card glass-card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-box-open me-2"></i>Inventory Status
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="inventoryList" class="inventory-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supply Chain Data -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card glass-card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-truck me-2"></i>Supply Chain Movement
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container-lg">
+                            <canvas id="supplyChainChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
